@@ -18,7 +18,7 @@ screen=pygame.display.set_mode(size)
 # Fill the screen White
 screen.fill(white)
 # Put something in the application Bar
-pygame.display.set_caption("Testing key presses")
+pygame.display.set_caption("Testing gamepad")
 
 pygame.draw.rect(screen,black,(19,19,276,276),0)
 
