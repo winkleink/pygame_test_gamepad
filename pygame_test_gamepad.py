@@ -9,27 +9,22 @@ black = [ 0, 0, 0]
 white = [255,255,255]
 red = [255, 0, 0]
 
-# set the delay between steps
-stepDelay = 0.002
-
 #os.environ["SDL_VIDEODRIVER"] = "dummy"
 pygame.init()
 
 # Set the height and width of the screen
-size=[800,600]
+size=[430,300]
 screen=pygame.display.set_mode(size)
 # Fill the screen White
 screen.fill(white)
 # Put something in the application Bar
 pygame.display.set_caption("Testing key presses")
 
-pygame.draw.rect(screen,black,(20,20,276,276),0)
+pygame.draw.rect(screen,black,(19,19,276,276),0)
 
 pygame.display.flip()
 
 pygame.joystick.init() # main joystick device system
-
-deadZone = 0.6 # make a wide deadzone
 
 done = True
 
