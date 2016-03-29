@@ -13,7 +13,7 @@ red = [255, 0, 0]
 pygame.init()
 
 # Set the height and width of the screen
-size=[430,300]
+size=[630,300]
 screen=pygame.display.set_mode(size)
 # Fill the screen White
 screen.fill(white)
@@ -52,7 +52,7 @@ while done:
         
         if e.type == pygame.locals.JOYBUTTONDOWN: # Read the buttons
             print ("button down"+str(e.button))
-            for i in range(0,4):
+            for i in range(0,10):
                 if e.button == i:
                     pygame.draw.rect(screen,red,(300+(i*30),20,20,20),0)
                     pygame.display.flip()
@@ -60,7 +60,7 @@ while done:
 
         if e.type == pygame.locals.JOYBUTTONUP: # Read the buttons
             print ("button up"+str(e.button))
-            for i in range(0,4):
+            for i in range(0,10):
                 if e.button == i:
                     pygame.draw.rect(screen,white,(300+(i*30),20,20,20),0)
                     pygame.display.flip()
