@@ -26,6 +26,8 @@ pygame.display.flip()
 
 pygame.joystick.init() # main joystick device system
 
+textfont = pygame.font.SysFont("moonspace",24)
+
 done = True
 
 try:
@@ -55,6 +57,8 @@ while done:
             for i in range(0,10):
                 if e.button == i:
                     pygame.draw.rect(screen,red,(300+(i*30),20,20,20),0)
+                    buttonText = textfont.render(str(i),1,white)
+                    screen.blit(buttonText,(300+(i*30)+3,20))
                     pygame.display.flip()
             
 
