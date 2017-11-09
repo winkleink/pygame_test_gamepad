@@ -36,7 +36,12 @@ try:
     print 'Enabled joystick: ' + j.get_name()
 except pygame.error:
     print 'no joystick found.'
-   
+
+pygame.draw.rect(screen,black,(19,19,276,276),0)
+pygame.draw.rect(screen,white,(148,148,20,20),0)
+pygame.display.flip()
+
+
 while done:
     for e in pygame.event.get(): # iterate over event stack
         if e.type == pygame.QUIT:
