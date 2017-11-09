@@ -27,6 +27,7 @@ pygame.display.flip()
 pygame.joystick.init() # main joystick device system
 
 textfont = pygame.font.SysFont("moonspace",24)
+joyfont = pygame.font.SysFont("moonspace",60)
 
 done = True
 
@@ -34,11 +35,15 @@ try:
     j = pygame.joystick.Joystick(0) # create a joystick instance
     j.init() # init instance
     print 'Enabled joystick: ' + j.get_name()
+    joyName = j.get_name()
 except pygame.error:
     print 'no joystick found.'
 
 pygame.draw.rect(screen,black,(19,19,276,276),0)
 pygame.draw.rect(screen,white,(148,148,20,20),0)
+joyText = textfont.render("Gamepad : "+joyName,1,red)
+screen.blit(joyText,(350,100))
+
 pygame.display.flip()
 
 
