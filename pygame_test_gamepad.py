@@ -57,8 +57,13 @@ while done:
 
             print x1
             print y1
+            x1Text = textfont.render("x : "+str(x1),1,red)
+            y1Text = textfont.render("y : "+str(y1),1,red)
             pygame.draw.rect(screen,black,(19,19,276,276),0)
             pygame.draw.rect(screen,white,(148+(x1*128),148+(y1*128),20,20),0)
+            pygame.draw.rect(screen,white,(300,150,250,200),0)
+            screen.blit(x1Text,(350,150))
+            screen.blit(y1Text,(350,200))
             pygame.display.flip()
 
         
