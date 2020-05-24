@@ -34,10 +34,10 @@ done = True
 try:
     j = pygame.joystick.Joystick(0) # create a joystick instance
     j.init() # init instance
-    print 'Enabled joystick: ' + j.get_name()
+    print ('Enabled joystick: ' + j.get_name())
     joyName = j.get_name()
 except pygame.error:
-    print 'no joystick found.'
+    print ('no joystick found.')
 
 pygame.draw.rect(screen,black,(19,19,276,276),0)
 pygame.draw.rect(screen,white,(148,148,20,20),0)
@@ -55,8 +55,8 @@ while done:
         if e.type == pygame.locals.JOYAXISMOTION: # Read Analog Joystick Axis
             x1 , y1 = j.get_axis(0), j.get_axis(1) # Left Stick
 
-            print x1
-            print y1
+            print (x1)
+            print (y1)
             x1Text = textfont.render("x : "+str(x1),1,red)
             y1Text = textfont.render("y : "+str(y1),1,red)
             pygame.draw.rect(screen,black,(19,19,276,276),0)
